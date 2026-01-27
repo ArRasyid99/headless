@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   Select,
   SelectContent,
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import type { Author, Tag, Category } from "@/lib/wordpress.d";
+import { ClientOnly } from "../utils/client-only";
 
 interface FilterPostsProps {
   authors: Author[];
@@ -29,9 +30,10 @@ export function FilterPosts({
   selectedCategory,
 }: FilterPostsProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleFilterChange = (type: string, value: string) => {
-    const newParams = new URLSearchParams(window.location.search);
+    const newParams = new URLSearchParams(searchParams.toString());
     newParams.delete("page");
     newParams.delete("search");
     value === "all" ? newParams.delete(type) : newParams.set(type, value);
@@ -48,8 +50,9 @@ export function FilterPosts({
   const hasAuthors = authors.length > 0;
 
   return (
-    <div className="grid md:grid-cols-[1fr_1fr_1fr_0.5fr] gap-2 my-4 z-10!">
-      <Select
+    <div className="grid md:grid-cols-[1fr_1fr_1fr_0.5fr] gap-2 my-4 z-10">
+     <ClientOnly>
+        <Select
         value={selectedTag || "all"}
         onValueChange={(value) => handleFilterChange("tag", value)}
       >
@@ -65,8 +68,10 @@ export function FilterPosts({
           ))}
         </SelectContent>
       </Select>
+      </ClientOnly>
 
-      <Select
+     <ClientOnly> 
+       <Select
         value={selectedCategory || "all"}
         onValueChange={(value) => handleFilterChange("category", value)}
       >
@@ -85,9 +90,10 @@ export function FilterPosts({
             </SelectItem>
           ))}
         </SelectContent>
-      </Select>
+      </Select></ClientOnly>
 
-      <Select
+      <ClientOnly>
+        <Select
         value={selectedAuthor || "all"}
         onValueChange={(value) => handleFilterChange("author", value)}
       >
@@ -107,6 +113,7 @@ export function FilterPosts({
           ))}
         </SelectContent>
       </Select>
+      </ClientOnly>
 
       <Button variant="outline" onClick={handleResetFilters}>
         Reset Filters

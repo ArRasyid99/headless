@@ -9,14 +9,15 @@ const nextConfig: NextConfig = {
     remotePatterns: wordpressHostname
       ? [
           {
-            protocol: "https",
-            hostname: wordpressHostname,
+            protocol: "http",
+            hostname: "bojamengaji.local",
             port: "",
-            pathname: "/**",
+            pathname: "/wp-content/uploads/**",
           },
         ]
       : [],
   },
+
   async redirects() {
     if (!wordpressUrl) {
       return [];

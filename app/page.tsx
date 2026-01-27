@@ -8,22 +8,31 @@ import Link from "next/link";
 import { File, Pen, Tag, Diamond, User, Folder } from "lucide-react";
 import { WordPressIcon } from "@/components/icons/wordpress";
 import { NextJsIcon } from "@/components/icons/nextjs";
+import Hero from "@/components/hero/hero-section";
+import { HijriCalendar } from "@/components/calender/hijriyah-calender";
+
 
 // This page is using the craft.tsx component and design system
 export default function Home() {
   return (
+
+    <>
+    
+    < Hero />
     <Section>
       <Container>
+        
         <ToDelete />
       </Container>
     </Section>
+    </>
   );
 }
 
 // This is just some example TSX
 const ToDelete = () => {
   return (
-    <main className="space-y-6">
+    <main>
       <Prose>
         <h1>Headless WordPress built with the Next.js</h1>
 
@@ -141,6 +150,53 @@ const ToDelete = () => {
           </span>
         </a>
       </div>
+
+      <div> 
+       <h1 className="text-2xl font-bold mb-6">
+        Kalender Hijriyah
+      </h1> 
+      <div className="w-full overflow-x-auto">
+
+
+      <HijriCalendar/>
+      </div>     
+    </div>
+      
     </main>
+    
   );
 };
+
+interface Post {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content?: string; // Tanda tanya berarti opsional
+  date: string;
+}
+
+async function getPosts(): Promise<Post[]> {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_URL as string, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `
+        query AmbilDaftarPost {
+          posts {
+            nodes {
+              id
+              title
+              slug
+              excerpt
+            }
+          }
+        }
+      `,
+    }),
+  });
+
+  const json = await res.json();
+  return json.data.posts.nodes;
+}
+

@@ -1,8 +1,9 @@
+
 import "./globals.css";
 
 import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { Nav } from "@/components/layout/nav";
+import { Nav } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -15,6 +16,8 @@ const font = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+
 
 export const metadata: Metadata = {
   title: "WordPress & Next.js Starter by 9d8",
@@ -37,7 +40,7 @@ export default function RootLayout({
       <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

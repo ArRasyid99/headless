@@ -38,46 +38,59 @@ interface MediaDetails {
   sizes: Record<string, MediaSize>;
 }
 
-export interface FeaturedMedia extends WPEntity {
-  title: RenderedTitle;
-  author: number;
-  caption: {
-    rendered: string;
-  };
-  alt_text: string;
-  media_type: string;
-  mime_type: string;
-  media_details: MediaDetails;
-  source_url: string;
+export interface RenderedField {
+  rendered: string;
 }
 
-// Content types
-export interface Post extends WPEntity {
-  title: RenderedTitle;
-  content: RenderedContent;
-  excerpt: RenderedContent;
-  author: number;
-  featured_media: number;
-  comment_status: "open" | "closed";
-  ping_status: "open" | "closed";
-  sticky: boolean;
-  template: string;
-  format:
-    | "standard"
-    | "aside"
-    | "chat"
-    | "gallery"
-    | "link"
-    | "image"
-    | "quote"
-    | "status"
-    | "video"
-    | "audio";
-  categories: number[];
-  tags: number[];
-  meta: Record<string, unknown>;
-  _embedded?: PostEmbedded;
+export interface FeaturedMedia {
+  id: number;
+  source_url: string;
+  alt_text?: string;
+  media_details?: {
+    sizes?: {
+      thumbnail?: { source_url: string };
+      medium?: { source_url: string };
+      large?: { source_url: string };
+      full?: { source_url: string };
+    };
+  };
 }
+export interface Post {
+  id: number;
+  slug: string;
+
+  date: string;        // 👈 publish date
+  modified: string;    // 👈 last modified date
+
+  title: {
+    rendered: string;
+  };
+
+  excerpt: {
+    rendered: string;
+  };
+
+  content: {
+    rendered: string;
+  };
+
+  featured_media: number;
+
+  _embedded?: {
+    "wp:featuredmedia"?: FeaturedMedia[];
+    "wp:term"?: Array<
+      Array<{
+        id: number;
+        name: string;
+        slug: string;
+        taxonomy: string;
+      }>
+    >;
+    author?: Author[];
+  };
+}
+
+
 
 export interface Page extends WPEntity {
   title: RenderedTitle;
@@ -138,11 +151,11 @@ interface EmbeddedTerm {
   slug: string;
 }
 
-export interface PostEmbedded {
-  author?: EmbeddedAuthor[];
-  "wp:featuredmedia"?: FeaturedMedia[];
-  "wp:term"?: EmbeddedTerm[][];
-}
+// export interface PostEmbedded {
+//   author?: EmbeddedAuthor[];
+//   "wp:featuredmedia"?: FeaturedMedia[];
+//   "wp:term"?: EmbeddedTerm[][];
+// }
 
 // Block types
 interface BlockSupports {

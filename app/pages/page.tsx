@@ -3,7 +3,10 @@ import { ArchiveList } from "@/components/archive-list";
 import type { Page as WPPage } from "@/lib/wordpress.d";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+
+export const revalidate = 3600; 
+
+
 
 export const metadata: Metadata = {
   title: "All Pages",
@@ -26,3 +29,6 @@ export default async function Page() {
     />
   );
 }
+
+
+

@@ -1,5 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -13,7 +18,9 @@
         max-width: 1400px;
     }
 }
-
+.font-poppins {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
 @theme {
     --font-sans:
         var(--font-sans), ui-sans-serif, system-ui, sans-serif,
