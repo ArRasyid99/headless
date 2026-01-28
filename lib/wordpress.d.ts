@@ -252,6 +252,23 @@ export interface SearchResult {
   };
 }
 
+export interface WPPost {
+  id: number;
+  slug: string;
+  title: {
+    rendered: string;
+  };
+  excerpt: {
+    rendered: string;
+  };
+  _embedded?: {
+    "wp:featuredmedia"?: {
+      source_url: string;
+    }[];
+  };
+}
+
+
 // Component Props Types
 export interface FilterBarProps {
   authors: Author[];

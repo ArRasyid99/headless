@@ -322,3 +322,12 @@ export function ensureHttps(url: string) {
   if (!url) return url;
   return url.replace("http://", "https://");
 }
+
+export async function getLatestPosts(limit = 6) {
+  const res = await fetch(
+    `${process.env.WORDPRESS_URL}/wp-json/wp/v2/posts?_embed&per_page=${limit}`,
+    { next: { revalidate: 3600 } }
+  );
+
+  return res.json();
+}

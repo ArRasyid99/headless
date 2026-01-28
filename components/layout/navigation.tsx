@@ -9,8 +9,8 @@ import { NavScroll } from "@/components/nav/nav-scroll";
 import { mainMenu } from "@/menu.config";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
-import Logo from "@/public/bojamengaji.svg";
-import YKBM from "@/public/YKBM.svg";
+import Logo from "@/public/icons/bojamengaji.ico";
+import YKBM from "@/public/icons/ykbm.ico";
 
 interface NavProps {
   className?: string;
@@ -31,30 +31,21 @@ export function Nav({ className, children, id }: NavProps) {
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 sm:px-8">
           <Link
             href="/"
-            className="flex items-center gap-4 transition-opacity hover:opacity-75"
+            className="flex items-center gap-1 transition-opacity hover:opacity-75"
           >
             <Image
               src={Logo}
               alt="Logo"
-              width={100}
-              height={26}
-              style={{
-               width: '42',   // Jika Anda menggunakan CSS untuk mengubah ukuran
-               height: '26',  // TAMBAHKAN INI agar aspek rasio terjaga
-             }}
-             
-              className="w-20 h-10 dark:invert"
+              width={56}
+              height={56}
+              className="w-15 h-auto dark:invert"
             />
              <Image
               src={YKBM}
               alt="Yayasan Kajian Boja Mengaji"
-              width={42}
-              height={26}
-               style={{
-               width: '42',   // Jika Anda menggunakan CSS untuk mengubah ukuran
-               height: '26',  // TAMBAHKAN INI agar aspek rasio terjaga
-             }}
-               className="w-8 h-15"
+              width={48}
+              height={48}
+              className="w-13 h-auto"
             
             />
             <span className="font-poppins text-sm font-semibold">

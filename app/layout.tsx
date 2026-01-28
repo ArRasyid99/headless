@@ -1,6 +1,5 @@
 
 import "./globals.css";
-
 import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Nav } from "@/components/layout/navigation";
@@ -10,12 +9,16 @@ import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 
+import "swiper/css";
+import "swiper/css/navigation";
+
 import type { Metadata } from "next";
 
 const font = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
 
 
 

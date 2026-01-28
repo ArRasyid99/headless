@@ -2,7 +2,8 @@ import { Section, Container } from "@/components/craft";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { mainMenu, contentMenu } from "@/menu.config";
 import { siteConfig } from "@/site.config";
-import Logo from "@/public/logo.svg";
+import Logo from "@/public/icons/bojamengaji.ico";
+import YKBM from "@/public/icons/ykbm.ico";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,15 +13,24 @@ export function Footer() {
       <Section>
         <Container className="grid md:grid-cols-[1.5fr_0.5fr_0.5fr] gap-12">
           <div className="flex flex-col gap-6 not-prose">
-            <Link href="/">
+            <Link href="/" className="flex items-center gap-3">
               <h3 className="sr-only">{siteConfig.site_name}</h3>
-              <Image
-                src={Logo}
-                alt="Logo"
-                className="dark:invert"
-                width={42}
-                height={26.44}
-              />
+               <Image
+              src={Logo}
+              alt="Logo"
+              width={56}
+              height={56}
+              className="w-15 h-auto dark:invert"
+            />
+             <Image
+              src={YKBM}
+              alt="Yayasan Kajian Boja Mengaji"
+              width={48}
+              height={48}
+              className="w-13 h-auto"
+            
+            />
+            
             </Link>
             <p>{siteConfig.site_description}</p>
           </div>

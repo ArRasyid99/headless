@@ -34,13 +34,7 @@ export function PostCard({ post }: { post: Post }) {
              className="h-full w-full object-cover"
             />
 
-            // <Image
-            //   className="h-full w-full object-cover"
-            //   src={media.source_url}
-            //   alt={post.title?.rendered || "Post thumbnail"}
-            //   width={400}
-            //   height={200}
-            // />
+        
           ) : (
             <div className="flex items-center justify-center w-full h-full text-muted-foreground">
               No image available

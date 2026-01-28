@@ -8,12 +8,12 @@ import Link from "next/link";
 import { File, Pen, Tag, Diamond, User, Folder } from "lucide-react";
 import Hero from "@/components/hero/hero-section";
 import SubHeader from "@/components/section/sub-section";
-
-
+import { getLatestPosts } from "@/lib/wordpress";
+import { PostCardCarousel } from "@/components/carousel/latest-post";
 
 // This page is using the craft.tsx component and design system
-export default function Home() {
-   
+export default async function Home() {
+   const posts = await getLatestPosts(6);
 
   return (
 
@@ -26,7 +26,12 @@ export default function Home() {
       </Container>
     </Section>
 
-
+ {/* SECTION KHUSUS CAROUSEL */}
+<section className="w-full py-16">
+  <div className="mx-auto max-w-7xl px-6">
+    <PostCardCarousel posts={posts} />
+  </div>
+</section>
     </>
   );
 }

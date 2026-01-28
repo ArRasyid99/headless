@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
@@ -18,14 +16,12 @@
         max-width: 1400px;
     }
 }
-.font-poppins {
-  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
+
+
 @theme {
     --font-sans:
         var(--font-sans), ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
+        "Apple Color Emoji", "Poppins", "Lora","Noto Color Emoji";
 
     --color-border: hsl(var(--border));
     --color-input: hsl(var(--input));
@@ -183,3 +179,12 @@
         @apply bg-background text-foreground;
     }
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
