@@ -19,10 +19,11 @@
 
 
 @theme {
-    --font-sans:
+    /* --font-sans:
         var(--font-sans), ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Poppins", "Lora","Noto Color Emoji";
-
+        "Apple Color Emoji", "Poppins", "Lora","Noto Color Emoji"; */
+    --font-body: var(--font-body);
+    --font-title: var(--font-title);
     --color-border: hsl(var(--border));
     --color-input: hsl(var(--input));
     --color-ring: hsl(var(--ring));
@@ -188,3 +189,16 @@
   scrollbar-width: none;
 }
 
+@layer base {
+  body {
+    @apply font-body text-neutral-800;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-title;
+  }
+}
+
+@utility font-caption {
+  font-family: var(--font-caption);
+}

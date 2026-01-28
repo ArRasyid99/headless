@@ -1,11 +1,13 @@
 
 import "./globals.css";
-import { Inter as FontSans } from "next/font/google";
+
+
+import { fontSans, fontSerif, fontCaption } from "@/lib/fonts";
+
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Nav } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/react";
-
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 
@@ -13,12 +15,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import type { Metadata } from "next";
-
-const font = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
 
 
 
@@ -40,7 +36,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
+      <body className={cn(
+    "min-h-screen antialiased",
+    fontSans.variable,
+    fontSerif.variable,
+    fontCaption.variable
+  )}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

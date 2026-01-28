@@ -15,7 +15,6 @@
 .section-sub {
   display: flex;
   align-items: st;
- 
   padding: 2rem 6rem;
   gap: 4rem;
 }

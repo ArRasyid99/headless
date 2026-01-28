@@ -43,7 +43,6 @@ export function HijriCalendar({ className }: HijriCalendarProps) {
     onSelect={setDate}
     className={cn(
     "h-sm w-sm rounded-lg",
-    isAyamulBidh && "ring-2 ring-green-500"
   )}
   />
       {hijri && (
