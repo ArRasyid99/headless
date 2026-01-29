@@ -6,7 +6,7 @@ import Link from "next/link";
 
 // Icons
 import { File, Pen, Tag, Diamond, User, Folder } from "lucide-react";
-import Hero from "@/components/hero/hero-section";
+
 import SubHeader from "@/components/section/sub-section";
 import { getLatestPosts } from "@/lib/wordpress";
 import { PostCardCarousel } from "@/components/carousel/latest-post";
@@ -18,7 +18,7 @@ export default async function Home() {
   return (
 
     <>
-    < Hero />
+
     < SubHeader />
     <Section>
       <Container>

@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import quotesData from "@/lib/quotedata";
 
@@ -7,8 +8,8 @@ export function QuotesRotator() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % quotesData.length);
-    }, 10000); // ganti setiap 5 detik
+      setIndex((i) => (i + 1) % quotesData.length);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, []);
@@ -16,18 +17,34 @@ export function QuotesRotator() {
   const quote = quotesData[index];
 
   return (
-    <section className="quotes">
-      <div key={index} className="quotes-content fade">
-        <p className="quotes-source mb-5">{quote.source}</p>
+    <section
+      className="
+        bg-slate-100 dark:bg-slate-950
+        border-l-4 border-lime-400
+        rounded-xl
+        px-6 py-5
+        max-w-3xl
+        motion-safe:animate-in
+        motion-safe:fade-in
+        motion-safe:slide-in-from-bottom-2
+        duration-500
+      "
+    >
+      <p className="text-sm italic text-slate-500 mb-4">
+        {quote.source}
+      </p>
 
-        <p className="font-arabic mb-2 max-w-prose mx-auto text-center leading-loose">{quote.arabic}</p>
+      <p className="font-arabic text-lg leading-loose text-right mb-4">
+        {quote.arabic}
+      </p>
 
-        <p className="quotes-translation">
-          {quote.translation}
-        </p>
+      <p className="italic text-slate-600 dark:text-slate-400 mb-2">
+        {quote.translation}
+      </p>
 
-        <p className="quotes-ref">({quote.reference})</p>
-      </div>
+      <p className="text-sm font-medium">
+        ({quote.reference})
+      </p>
     </section>
   );
 }

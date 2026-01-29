@@ -1,37 +1,64 @@
+"use client"
 
-import "./section.css"
+import dynamic from "next/dynamic";
 import { HijriCalendar } from "@/components/calender/hijriyah-calender";
-import { QuotesRotator } from "@/components/section/quotes";
+import { use } from "react";
+
+const QuotesRotator = dynamic(
+  () => import("@/components/section/quotes").then(m => m.QuotesRotator),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-40 rounded-xl bg-slate-100 dark:bg-slate-900 animate-pulse" />
+    ),
+  }
+);
 
 export default function SubHeader() {
   return (
-    <section className="section-sub">
-    <div> 
-    <h1 className="text-2xl font-bold mb-2">
-     Kalender
-    </h1> 
-    <p className="mb-4 font-normal md:text-sm lg:text-lg">Kalender hijriyah dilengkapi dengan pengingat ayyamul bidh.</p>
-     <div className="w-full overflow-x-auto ">
-       <HijriCalendar />  
-     </div>     
-     </div>
+    <section className="py-14 px-5 md:px-10 lg:px-20 lg:py-20">
+      <div className="container mx-auto">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-start">
 
-     <div>
-    <h1 className="text-2xl font-bold mb-2 md:text-lg lg:text-3xl">
-        Kutipan Hadits
-    </h1> 
-    <p className="mb-4 font-normal md:text-sm lg:text-lg">Menyajikan hadits-hadits shahih pilihan. Semoga kita bisa mengambil pelajaran dan meneladani kepribadian beliau, Shalallahu ‘Alaihi Wa Sallam.</p>
-    <div className="w-full overflow-x-auto">
-        <QuotesRotator />
-     </div>     
-        
-     </div>
-     
+          {/* KALENDER — 40% */}
+          <div className="w-full lg:basis-[40%] lg:max-w-[40%] max-w-md mx-auto lg:mx-0">
+            <h1 className="text-xl lg:text-2xl font-bold mb-2">
+              Kalender
+            </h1>
+
+            <p className="mb-5 text-sm lg:text-base text-gray-600">
+              Kalender hijriyah dilengkapi dengan pengingat ayyamul bidh.
+            </p>
+
+            <HijriCalendar />
+          </div>
+
+          {/* QUOTES — 60% */}
+          <div className="w-full lg:basis-[60%] lg:max-w-[60%]">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
+              Kutipan Hadits
+            </h1>
+
+            <p className="mb-5 text-sm lg:text-base text-gray-600 max-w-2xl">
+              Menyajikan hadits-hadits shahih pilihan.
+            </p>
+
+            <div className="
+              relative
+              -mx-4 md:mx-0
+              overflow-x-auto
+              motion-safe:animate-in
+              motion-safe:fade-in
+              motion-safe:slide-in-from-bottom-2
+              duration-500
+              will-change-transform
+            ">
+              <QuotesRotator />
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
   );
 }
-
-
-
-
- 

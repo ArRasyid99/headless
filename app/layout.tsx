@@ -2,7 +2,7 @@
 import "./globals.css";
 
 
-import { fontSans, fontSerif, fontCaption, fontArabic } from "@/lib/fonts";
+import { fontSans, fontSerif, fontCaption, fontArabic, cairo } from "@/lib/fonts";
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Nav } from "@/components/layout/navigation";
@@ -42,6 +42,7 @@ export default function RootLayout({
     fontSerif.variable,
     fontCaption.variable,
     fontArabic.variable,
+    cairo.className,
   )}>
         <ThemeProvider
           attribute="class"

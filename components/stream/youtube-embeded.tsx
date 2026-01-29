@@ -14,7 +14,7 @@ export function YouTubeEmbed({
 
       <iframe
         className="absolute inset-0 h-full w-full"
-        src={`https://www.youtube.com/embed/${videoId}`}
+        src={`https://www.youtube-nocookie.com/embed/${videoId}`}
         title={title}
         loading="lazy"
         referrerPolicy="strict-origin-when-cross-origin"

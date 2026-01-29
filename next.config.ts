@@ -4,7 +4,9 @@ const wordpressHostname = process.env.WORDPRESS_HOSTNAME;
 const wordpressUrl = process.env.WORDPRESS_URL;
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  trailingSlash: false,
+  compress: true,
+  reactStrictMode: true,
   images: {
     remotePatterns: wordpressHostname
       ? [

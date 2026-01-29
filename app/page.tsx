@@ -6,7 +6,7 @@ import Link from "next/link";
 
 // Icons
 import { File, Pen, Tag, Diamond, User, Folder } from "lucide-react";
-import Hero from "@/components/hero/hero-section";
+
 import SubHeader from "@/components/section/sub-section";
 import SubMedia from "@/components/section/media-section";
 import SubAmalan from "@/components/section/amalan-section";
