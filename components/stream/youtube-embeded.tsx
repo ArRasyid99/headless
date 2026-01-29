@@ -8,7 +8,7 @@ export function YouTubeEmbed({
   title = "YouTube video player",
 }: YouTubeEmbedProps) {
   return (
-    <div className="relative w-auto h-xl overflow-hidden rounded-xl bg-black">
+    <div className="relative w-auto h-xl font-medium overflow-hidden rounded-xl bg-black">
       {/* Aspect ratio 16:9 */}
       <div className="pt-[56.25%]" />
 

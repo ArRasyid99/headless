@@ -9,6 +9,9 @@ import { File, Pen, Tag, Diamond, User, Folder } from "lucide-react";
 import Hero from "@/components/hero/hero-section";
 import SubHeader from "@/components/section/sub-section";
 import SubMedia from "@/components/section/media-section";
+import SubAmalan from "@/components/section/amalan-section";
+import HeroCopy from "@/components/hero/hero";
+
 
 
 
@@ -19,15 +22,17 @@ export default function Home() {
   return (
 
     <>
-    < Hero />
-    < SubHeader />
+    
+    <HeroCopy />
+    <SubHeader />
     <Section>
       <Container>
         <BodySection />
+         <SubMedia />
+
       </Container>
     </Section>
-    < SubMedia />
-
+    <SubAmalan />
     </>
   );
 }
@@ -46,7 +51,7 @@ const BodySection = () => {
 
      
 
-      <div className="grid md:grid-cols-3 gap-4 mt-6">
+      <div className="grid md:grid-cols-3 gap-4 mt-6 mb-20">
         <Link
           className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
           href="/posts"

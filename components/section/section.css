@@ -54,7 +54,7 @@
 .quotes-source {
    color: var(--quote-muted);
   font-style: italic;
-  margin-bottom: 1rem;
+
 }
 
 .quotes-arabic {
@@ -67,11 +67,11 @@
 .quotes-translation {
   color: var(--quote-muted);
   font-style: italic;
-  margin-bottom: 1rem;
+
 }
 
 .quotes-ref {
-  font-weight: 600;
+ 
    color: var(--quote-text);
 }
 

@@ -29,10 +29,11 @@ function Calendar({
     <DayPicker
       showOutsideDays={showOutsideDays}
       className={cn(
-        "bg-background group/calendar p-3 [--cell-size:2rem] [[data-slot=card-content]_&]:dark:bg-",
-        String.raw`rtl:**:[.rdp-button\_next>svg]:rotate-180`,
-        String.raw`rtl:**:[.rdp-button\_previous>svg]:rotate-180`,
-        className
+         "bg-background group/calendar p-2 sm:p-3",
+  "[--cell-size:1.75rem] sm:[--cell-size:2rem] md:[--cell-size:2.25rem]",
+  String.raw`rtl:**:[.rdp-button\_next>svg]:rotate-180`,
+  String.raw`rtl:**:[.rdp-button\_previous>svg]:rotate-180`,
+  className
       )}
       captionLayout={captionLayout}
       formatters={{
@@ -41,7 +42,7 @@ function Calendar({
         ...formatters,
       }}
       classNames={{
-        root: cn("w-fit", defaultClassNames.root),
+       root: cn("w-full max-w-full", defaultClassNames.root),
         months: cn(
           "relative flex flex-col gap-4 md:flex-row",
           defaultClassNames.months
@@ -87,7 +88,7 @@ function Calendar({
         table: "w-full border-collapse",
         weekdays: cn("flex", defaultClassNames.weekdays),
         weekday: cn(
-          "text-muted-foreground flex-1 select-none rounded-md text-[0.8rem] font-normal",
+         "text-muted-foreground flex-1 select-none rounded-md text-[0.7rem] sm:text-[0.8rem] font-normal",
           defaultClassNames.weekday
         ),
         week: cn("mt-2 flex w-full", defaultClassNames.week),
@@ -100,8 +101,12 @@ function Calendar({
           defaultClassNames.week_number
         ),
         day: cn(
-          "group/day relative aspect-square h-full w-full select-none p-0 text-center [&:first-child[data-selected=true]_button]:rounded-l-md [&:last-child[data-selected=true]_button]:rounded-r-md",
-          defaultClassNames.day
+           "group/day relative aspect-square w-full select-none p-0 text-center",
+  "sm:aspect-square",
+  "h-auto sm:h-full",
+  "[&:first-child[data-selected=true]_button]:rounded-l-md",
+  "[&:last-child[data-selected=true]_button]:rounded-r-md",
+  defaultClassNames.day
         ),
         range_start: cn(
           "bg-accent rounded-l-md",

@@ -2,7 +2,7 @@
 import "./globals.css";
 
 
-import { fontSans, fontSerif, fontCaption } from "@/lib/fonts";
+import { fontSans, fontSerif, fontCaption, fontArabic } from "@/lib/fonts";
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Nav } from "@/components/layout/navigation";
@@ -40,7 +40,8 @@ export default function RootLayout({
     "min-h-screen antialiased",
     fontSans.variable,
     fontSerif.variable,
-    fontCaption.variable
+    fontCaption.variable,
+    fontArabic.variable,
   )}>
         <ThemeProvider
           attribute="class"

@@ -36,7 +36,12 @@ export function HijriCalendar({ className }: HijriCalendarProps) {
   if (!mounted) return null; // 🔥 anti hydration error
 
   return (
-   <div className="h-sm w-sm overflow-hidden rounded-lg border bg-background p-2 flex flex-col items-center justify-center gap-2">
+   <div  className={cn(
+    "w-full max-w-xs sm:max-w-sm md:max-w-md",
+    "overflow-hidden rounded-lg border bg-background p-2 sm:p-3",
+    "flex flex-col items-center justify-center gap-2",
+    className
+  )}>
   <Calendar
     mode="single"
     selected={date}

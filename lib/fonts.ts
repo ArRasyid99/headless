@@ -1,5 +1,5 @@
 // src/lib/fonts.ts
-import { Inter, Lora, Poppins } from "next/font/google";
+import { Inter, Lora, Poppins, Amiri } from "next/font/google";
 
 export const fontSans = Inter({
   subsets: ["latin"],
@@ -20,3 +20,10 @@ export const fontCaption = Poppins({
   variable: "--font-caption",
   display: "swap",
 })
+
+export const fontArabic = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-arabic",
+  display: "swap",
+});

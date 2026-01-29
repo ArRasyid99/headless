@@ -11,13 +11,13 @@ export default function SubHeader() {
      Kalender
     </h1> 
     <p className="mb-4 font-normal md:text-sm lg:text-lg">Kalender hijriyah dilengkapi dengan pengingat ayyamul bidh.</p>
-     <div className="w-full overflow-x-auto">
+     <div className="w-full overflow-x-auto ">
        <HijriCalendar />  
      </div>     
      </div>
 
      <div>
-    <h1 className="text-2xl font-bold mb-2">
+    <h1 className="text-2xl font-bold mb-2 md:text-lg lg:text-3xl">
         Kutipan Hadits
     </h1> 
     <p className="mb-4 font-normal md:text-sm lg:text-lg">Menyajikan hadits-hadits shahih pilihan. Semoga kita bisa mengambil pelajaran dan meneladani kepribadian beliau, Shalallahu ‘Alaihi Wa Sallam.</p>

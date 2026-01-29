@@ -5,16 +5,16 @@ export default function SubMedia() {
     <section>
 
     <div className="mb-20">
-    <div className="w-2/3 align-center mx-auto">
-        <h1 className="text-4xl font-bold mb-5 text-center">
+        <h1 className="font-bold text-2xl mb-10 text-center md:text-lg lg:text-3xl">
          Taman - taman Surga
         </h1>
-       
-       <p className="font-caption mb-10 w-2/3 mx-auto text-center md:text-sm lg:text-lg">
-       Ikuti channel kami untuk mendapatkan pembaruan konten kajian rutin dan siaran langsung dari Boja Mengaji.</p>
-        <YouTubeEmbed videoId="p1-OzHaN3gU" title="Kajian Ahad Pekan Keempat" />
-     </div>     
+        <div className="mb-10 w-[90%] md:w-1/4 lg:w-3xl items-center mx-auto">
+            <YouTubeEmbed videoId="p1-OzHaN3gU" title="Kajian Ahad Pekan Keempat" />
+        </div>     
         
+        <p className="font-caption mb-10 max-w-prose mx-auto text-center md:text-sm lg:text-lg">
+        Ikuti channel kami untuk mendapatkan pembaruan konten kajian rutin dan siaran langsung dari Boja Mengaji.</p>
+    
      </div>
      
     </section>

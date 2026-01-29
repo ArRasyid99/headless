@@ -202,3 +202,7 @@
 @utility font-caption {
   font-family: var(--font-caption);
 }
+
+@utility font-arabic {
+  font-family: var(--font-arabic);
+}
