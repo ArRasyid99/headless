@@ -19,9 +19,8 @@
 
 
 @theme {
-    /* --font-sans:
-        var(--font-sans), ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Poppins", "Lora","Noto Color Emoji"; */
+    --font-sans:
+        var(--font-sans);
     --font-body: var(--font-body);
     --font-title: var(--font-title);
     --color-border: hsl(var(--border));
@@ -95,16 +94,11 @@
 }
 
 @utility no-scrollbar {
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @layer base {
@@ -211,4 +205,17 @@
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700;
+}
+
+.video-frame {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* paksa semua isi lite-youtube ikut radius */
+.video-frame lite-youtube,
+.video-frame reveal,
+.video-frame iframe,
+.video-frame img {
+  border-radius: 20px !important;
 }

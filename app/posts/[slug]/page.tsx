@@ -1,8 +1,6 @@
 import {
   getPostBySlug,
-  getFeaturedMediaById,
-  getAuthorById,
-  getCategoryById,
+
   getAllPostSlugs,
 } from "@/lib/wordpress";
 import { generateContentMetadata, stripHtml } from "@/lib/metadata";

@@ -29,6 +29,13 @@ const quotesData = [
       "Sebaik-baik kalian adalah orang yang belajar Al-Qur'an dan mengajarkannya.",
     reference: "HR. Bukhari no.5027",
   },
+{
+    source: "Dari ‘Abdullah bin ‘Amr bin Al ‘Ash, Rasulullah shallallahu ‘alaihi wa sallam bersabda,",
+    arabic: "صَوْمُ ثَلاَثَةِ أَيَّامٍ صَوْمُ الدَّهْرِ كُلِّهِ",
+    translation:"Puasa pada tiga hari setiap bulannya adalah seperti puasa sepanjang tahun.",
+    reference: "HR. Bukhari no.1979",
+}
+  
 ];
 
 export const getQuote = () => {

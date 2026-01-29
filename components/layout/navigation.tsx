@@ -18,7 +18,7 @@ interface NavProps {
   id?: string;
 }
 
-export function Nav({ className, children, id }: NavProps) {
+export default function Navigation({ className, children, id }: NavProps) {
   return (
     <NavScroll>
       <nav

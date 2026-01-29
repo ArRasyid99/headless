@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-5 md:px-10 lg:px-20">
+    <section className="relative overflow-hidden py-10 px-5 md:px-10 lg:px-10">
       <div className="container mx-auto py-12">
 
         <div className="
@@ -103,7 +103,7 @@ export default function Hero() {
             <div className="relative hidden md:block aspect-video">
 
               {/* LCP IMAGE */}
-              <div className="absolute top-0 right-0 w-[85%] h-[85%] rounded-2xl overflow-hidden shadow-xl">
+              <div className="absolute top-0 right-0 w-[85%] h-[95%] rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/hero-img1.jpg"
                   alt="Hero utama"
@@ -116,7 +116,7 @@ export default function Hero() {
               </div>
 
               {/* SECOND IMAGE */}
-              <div className="absolute bottom-[-5%] left-[-5%] w-[55%] h-[60%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="absolute bottom-[-5%] left-[-5%] w-[55%] h-[70%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <Image
                   src="/images/hero-img2.jpg"
                   alt="Hero kedua"

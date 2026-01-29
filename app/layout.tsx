@@ -1,31 +1,14 @@
-
+// app/layout.tsx
 import "./globals.css";
-
-
-import { fontSans, fontSerif, fontCaption, fontArabic, cairo } from "@/lib/fonts";
-
-import { ThemeProvider } from "@/components/theme/theme-provider";
-import { Nav } from "@/components/layout/navigation";
-import { Footer } from "@/components/layout/footer";
-import { Analytics } from "@vercel/analytics/react";
-import { siteConfig } from "@/site.config";
+import { fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-
-import "swiper/css";
-import "swiper/css/navigation";
-
+import { siteConfig } from "@/site.config";
 import type { Metadata } from "next";
 
-
-
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
-  description:
-    "A starter template for Next.js with WordPress as a headless CMS.",
+  title: "Masjid Muhammad Al Qosim",
+  description: "A starter template for Next.js with WordPress as a headless CMS.",
   metadataBase: new URL(siteConfig.site_domain),
-  alternates: {
-    canonical: "/",
-  },
 };
 
 export default function RootLayout({
@@ -35,26 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className={cn(
-    "min-h-screen antialiased",
-    fontSans.variable,
-    fontSerif.variable,
-    fontCaption.variable,
-    fontArabic.variable,
-    cairo.className,
-  )}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Nav />
-          {children}
-          <Footer />
-        </ThemeProvider>
-        <Analytics />
+      <body className={cn("min-h-screen antialiased", fontSans.className)}>
+        {/* client dipisah */}
+        {children}
       </body>
     </html>
   );

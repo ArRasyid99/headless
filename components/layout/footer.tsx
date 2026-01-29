@@ -7,7 +7,7 @@ import YKBM from "@/public/icons/ykbm.ico";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer>
       <Section>

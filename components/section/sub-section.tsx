@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { HijriCalendar } from "@/components/calender/hijriyah-calender";
-import { use } from "react";
+
 
 const QuotesRotator = dynamic(
   () => import("@/components/section/quotes").then(m => m.QuotesRotator),
@@ -22,26 +22,21 @@ export default function SubHeader() {
 
           {/* KALENDER — 40% */}
           <div className="w-full lg:basis-[40%] lg:max-w-[40%] max-w-md mx-auto lg:mx-0">
-            <h1 className="text-xl lg:text-2xl font-bold mb-2">
+            <h1 className="text-xl lg:text-2xl font-bold mb-5">
               Kalender
             </h1>
-
-            <p className="mb-5 text-sm lg:text-base text-gray-600">
-              Kalender hijriyah dilengkapi dengan pengingat ayyamul bidh.
-            </p>
-
             <HijriCalendar />
+            <p className="py-2 text-sm lg:text-base text-gray-600">
+              Kalender hijriyah dilengkapi dengan pengingat ayyamul bidh. 
+            </p>
           </div>
 
           {/* QUOTES — 60% */}
           <div className="w-full lg:basis-[60%] lg:max-w-[60%]">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5">
               Kutipan Hadits
             </h1>
 
-            <p className="mb-5 text-sm lg:text-base text-gray-600 max-w-2xl">
-              Menyajikan hadits-hadits shahih pilihan.
-            </p>
 
             <div className="
               relative
@@ -54,6 +49,11 @@ export default function SubHeader() {
               will-change-transform
             ">
               <QuotesRotator />
+
+              <p className="py-2 text-sm lg:text-base text-gray-600 max-w-2xl">
+                Menyajikan hadits-hadits shahih pilihan sebagai pengingat jiwa, Semoga kita dapat memperoleh pelajaran dan dapat meneladani kepribadian beliau Shalallahu A'laihi Wasalam.
+              </p>
+
             </div>
           </div>
 
