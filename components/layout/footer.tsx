@@ -1,7 +1,7 @@
 import { Section, Container } from "@/components/craft";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
-import { mainMenu, contentMenu } from "@/menu.config";
-import { siteConfig } from "@/site.config";
+import { mainMenu, contentMenu } from "@/lib/menu.config";
+import { siteConfig } from "@/lib/site.config";
 import Logo from "@/public/icons/bojamengaji.ico";
 import YKBM from "@/public/icons/ykbm.ico";
 import Image from "next/image";

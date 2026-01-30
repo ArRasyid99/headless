@@ -1,4 +1,4 @@
-import { siteConfig } from "@/site.config";
+import { siteConfig } from "@/lib/site.config";
 import type { Metadata } from "next";
 
 interface ContentMetadataOptions {

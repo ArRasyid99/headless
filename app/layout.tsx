@@ -2,7 +2,7 @@
 import "./globals.css";
 import { fontSans, fontSerif, fontCaption, fontArabic} from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/site.config";
+import { siteConfig } from "@/lib/site.config";
 import type { Metadata } from "next";
 
 

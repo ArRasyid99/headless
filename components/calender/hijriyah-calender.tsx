@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { getHijriDate } from "@/lib/hijri";
-import { useMounted } from "@/hook/use-mounted";
+import { useMounted } from "@/lib/hooks/use-mounted";
 import { cn } from "@/lib/utils";
 
 type HijriCalendarProps = {

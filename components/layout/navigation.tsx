@@ -7,8 +7,8 @@ import { ClientOnly } from "@/components/utils/client-only";
 import { MobileNav } from "@/components/nav/mobile-nav";
 import { NavScroll } from "@/components/nav/nav-scroll";
 
-import { mainMenu } from "@/menu.config";
-import { siteConfig } from "@/site.config";
+import { mainMenu } from "@/lib/menu.config";
+import { siteConfig } from "@/lib/site.config";
 import { cn } from "@/lib/utils";
 import Logo from "@/public/icons/bojamengaji.ico";
 import YKBM from "@/public/icons/ykbm.ico";
