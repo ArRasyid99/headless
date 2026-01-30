@@ -22,37 +22,37 @@ const features = [
   {
     icon: BookOpen,
     title: "Belajar Al-Qur’an",
-    desc: "Program pembelajaran terstruktur dan berkelanjutan",
+    desc: "Tahsin, Belajar tajwid, dan Mentadaburinya",
   },
   {
     icon: BookOpen,
     title: "Shalat Sunnah Setelah Wudhu",
-    desc: "Program pembelajaran terstruktur dan berkelanjutan",
+    desc: "2 Rakaat setelah wudhu",
   },
   {
     icon: Heart,
     title: "Dzikir Pagi Petang",
-    desc: "Salurkan kebaikan dengan proses yang cepat",
+    desc: "Membaca dzikir waktu pagi dan petang",
   },
   {
     icon: Users,
     title: "Shalat Dhuha",
-    desc: "Bersama membangun generasi berakhlak",
+    desc: "2 Rakaat di waktu dhuha",
   },
   {
     icon: Users,
-    title: "Puasa Senin - Kamis",
-    desc: "Bersama membangun generasi berakhlak",
+    title: "Puasa Sunnah",
+    desc: "Puasa Senin - Kamis dan Ayyamul bidh",
   },
   {
     icon: HandCoins,
     title: "Sedekah",
-    desc: "Laporan donasi dapat diakses kapan saja",
+    desc: "Berinfaq dengan harta",
   },
     {
     icon: Users,
     title: "Shalat Rawatib",
-    desc: "Bersama membangun generasi berakhlak",
+    desc: "Shalat sunnah pada waktu rawatib",
   },
   
 ]
@@ -63,7 +63,7 @@ export default function FeatureSection() {
   )
 
   return (
-    <section className="py-10">
+    <section className="py-10 px-5">
       <div className="container mx-auto">
 
         {/* Header */}
