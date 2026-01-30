@@ -31,10 +31,8 @@ const features = [
 export default function BlogSection() {
   return (
    <main>
-     <section className="mb-20">
-    
-
-    <div className="grid grid-cols-1 lg:grid-cols-2">
+     <section className="mb-20 px-5">
+     <div className="grid grid-cols-1 lg:grid-cols-2">
      <section className="py-12 ">
       <h1 className="text-2xl font-semibold leading-none tracking-tight py-2 dark:invert">Boja Mengaji</h1>
       <p className="dark:invert">Kami berfokus memberikan kontribusi terbaik bagi kaum muslimin.</p>

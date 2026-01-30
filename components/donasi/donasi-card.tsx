@@ -34,7 +34,7 @@ export default function DonasiCard() {
         {/* INFO */}
         <div className="rounded-xl bg-yellow-50 border border-yellow-100 py-4  p-4 text-sm text-gray-700">
           <p className="font-semibold mb-2">  ⚠️ <strong>Perhatian</strong></p>
-          <p> Setelah melakukan transfer, dimohon untuk melakukan konfirmasi dengan mengirim bukti transfer melalui WhatsApp Admin.
+          <p className="text-justify wrap-normal"> Setelah melakukan transfer, dimohon untuk melakukan konfirmasi dengan mengirim bukti transfer melalui WhatsApp Admin.
           </p>
        </div>
         <div className="py-5">

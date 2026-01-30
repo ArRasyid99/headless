@@ -67,7 +67,7 @@ export default function Navigation({ className, children, id }: NavProps) {
               ))}
             </div>
   <Button asChild className="hidden sm:flex dark:invert">
-            <Link href="/wakaf">Wakaf</Link>
+            <Link href="/wakaf/peluang-jariyah">Wakaf</Link>
           </Button>
 
             <ClientOnly>

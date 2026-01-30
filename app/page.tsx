@@ -22,7 +22,7 @@ export default function Home() {
   return (
 
     <ClientLayout>
-    <section className="px-20 sm:px-2 md:px-10 lg:px-20"> 
+    <section className="px-0 sm:px-10 md:px-10 lg:px-20"> 
     <Hero />
     <SubHeader />
     <FeatureSection />

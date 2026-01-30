@@ -22,7 +22,7 @@ export default function Hero() {
             <h1  className="
               hero-title
               mb-4
-              text-3xl lg:text-4xl dark:text-white
+              text-4xl md:wrap-anywhere dark:text-white
             ">
               Menebarkan Sunnah Rasulullah ﷺ Membangun Umat
             </h1>
@@ -38,7 +38,7 @@ export default function Hero() {
             </p>
 
             <Link
-              href="/about"
+              href="/page/jalan-buntu"
               className="
                 inline-flex items-center gap-2
                 rounded-full

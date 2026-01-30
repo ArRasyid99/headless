@@ -1,13 +1,14 @@
 // Define the menu items
 export const mainMenu = {
   beranda: "/",
-  "Tentang Kami": "/about",
-  "Info Kajian": "/jadwal-kajian",
-  blog: "/posts",
+  "Tentang Kami": "/tentang/boja-menngaji",
+  "Info Kajian": "/info/informasi-kajian",
+  blog: "/halaman/berita-terbaru",
 };
 
 export const contentMenu = {
-  categories: "/posts/categories",
-  tags: "/posts/tags",
-  authors: "/posts/authors",
+  categories: "/halaman/category-blog",
+  tags: "/halaman/tag-blog",
+  authors: "/halaman/author-blog",
 };
+
