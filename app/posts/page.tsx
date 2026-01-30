@@ -23,6 +23,7 @@ import { FilterPosts } from "@/components/posts/filter";
 import { SearchInput } from "@/components/posts/search-input";
 
 import type { Metadata } from "next";
+import ClientLayout from "../client-layout";
 
 export const metadata: Metadata = {
   title: "Blog Posts",
@@ -73,7 +74,9 @@ export default async function Page({
   };
 
   return (
-    <Section>
+
+    <ClientLayout>
+      <Section>
       <Container>
         <div className="space-y-8">
           <Prose>
@@ -160,5 +163,7 @@ export default async function Page({
         </div>
       </Container>
     </Section>
+    </ClientLayout>
+    
   );
 }

@@ -32,13 +32,13 @@ export default function Footer() {
             />
             
             </Link>
-            <p>{siteConfig.site_description}</p>
+            <p className="dark:invert">{siteConfig.site_description}</p>
           </div>
           <div className="flex flex-col gap-2 text-sm">
-            <h5 className="font-medium text-base">Website</h5>
+            <h5 className="font-medium text-base dark:invert">Website</h5>
             {Object.entries(mainMenu).map(([key, href]) => (
               <Link
-                className="hover:underline underline-offset-4"
+                className="hover:underline underline-offset-4 dark:invert"
                 key={href}
                 href={href}
               >
@@ -47,10 +47,10 @@ export default function Footer() {
             ))}
           </div>
           <div className="flex flex-col gap-2 text-sm">
-            <h5 className="font-medium text-base">Blog</h5>
+            <h5 className="font-medium text-base dark:invert">Blog</h5>
             {Object.entries(contentMenu).map(([key, href]) => (
               <Link
-                className="hover:underline underline-offset-4"
+                className="hover:underline underline-offset-4 dark:invert"
                 key={href}
                 href={href}
               >
@@ -61,9 +61,9 @@ export default function Footer() {
         </Container>
         <Container className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center">
           <ThemeToggle />
-          <p className="text-muted-foreground">
-            &copy; <a href="https://9d8.dev">9d8</a>. All rights reserved.
-            2025-present.
+          <p className="text-muted-foreground ">
+            &copy; <a className="dark:invert" href="/">BojaMengaji</a>. All rights reserved.
+            2026.
           </p>
         </Container>
       </Section>

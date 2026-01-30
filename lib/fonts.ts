@@ -1,7 +1,7 @@
-// src/lib/fonts.ts
-import { Inter, Lora, Poppins, Amiri, Cairo} from "next/font/google";
 
-export const fontSans = Inter({
+import { Open_Sans, Lora, Poppins, Amiri,} from "next/font/google";
+
+export const fontSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -10,7 +10,8 @@ export const fontSans = Inter({
 
 export const fontSerif = Lora({
   subsets: ["latin"],
-  variable: "--font-title",
+  variable: "--font-serif",
+  weight: ["500"],
   display: "swap",
 });
 
@@ -28,7 +29,3 @@ export const fontArabic = Amiri({
   display: "swap",
 });
 
-export const cairo = Cairo({
-  subsets: ['latin'],
-  display: 'swap',
-});

@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import ClientLayout from "@/app/client-layout";
 
 export async function generateStaticParams() {
   return await getAllPostSlugs();
@@ -61,7 +62,8 @@ export default async function Page({
   });
 
   return (
-    <Section>
+   <ClientLayout>
+     <Section>
       <Container>
         <Prose>
           <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
@@ -107,6 +109,8 @@ export default async function Page({
         />
       </Container>
     </Section>
+   </ClientLayout>
+
   );
 }
 

@@ -5,7 +5,11 @@ const config: Config = {
     extend: {
       fontFamily: {
         body: ["var(--font-sans)"],
-        title: ["var(--font-title)"],
+        title: ["var(--font-serif)"],
+        serif: ["var(--font-serif)"],
+        caption: ["var(--font-caption)"],
+        arabic: ["var(--font-arabic)"],
+       
       },
     },
   },

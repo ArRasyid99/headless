@@ -34,7 +34,7 @@ export function QuotesRotator() {
         {quote.source}
       </p>
 
-      <p className="font-arabic text-lg leading-loose text-right mb-4">
+      <p className="font-arabic text-lg leading-loose text-right mb-4 dark:text-slate-200">
         {quote.arabic}
       </p>
 
@@ -42,7 +42,7 @@ export function QuotesRotator() {
         {quote.translation}
       </p>
 
-      <p className="text-sm font-medium">
+      <p className="text-sm font-medium dark:invert">
         ({quote.reference})
       </p>
     </section>

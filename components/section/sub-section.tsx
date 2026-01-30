@@ -16,24 +16,24 @@ const QuotesRotator = dynamic(
 
 export default function SubHeader() {
   return (
-    <section className="py-14 px-5 md:px-10 lg:px-20 lg:py-20">
+    <section className="py-14">
       <div className="container mx-auto">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start">
 
           {/* KALENDER — 40% */}
           <div className="w-full lg:basis-[40%] lg:max-w-[40%] max-w-md mx-auto lg:mx-0">
-            <h1 className="text-xl lg:text-2xl font-bold mb-5">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5 dark:invert">
               Kalender
             </h1>
             <HijriCalendar />
-            <p className="py-2 text-sm lg:text-base text-gray-600">
-              Kalender hijriyah dilengkapi dengan pengingat ayyamul bidh. 
+            <p className="py-2 text-sm text-justify lg:text-base text-gray-600">
+              Kalender hijriyah dilengkapi dengan pengingat ayyamul bidh. Setia tanggal 13,14,15 bulan hijriyah. 
             </p>
           </div>
 
           {/* QUOTES — 60% */}
           <div className="w-full lg:basis-[60%] lg:max-w-[60%]">
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5 dark:invert">
               Kutipan Hadits
             </h1>
 
@@ -50,8 +50,8 @@ export default function SubHeader() {
             ">
               <QuotesRotator />
 
-              <p className="py-2 text-sm lg:text-base text-gray-600 max-w-2xl">
-                Menyajikan hadits-hadits shahih pilihan sebagai pengingat jiwa, Semoga kita dapat memperoleh pelajaran dan dapat meneladani kepribadian beliau Shalallahu A'laihi Wasalam.
+              <p className="py-2 text-justify text-sm lg:text-base text-gray-600 max-w-2xl">
+                Menyajikan hadits-hadits shahih pilihan sebagai pengingat jiwa, Semoga kita dapat memperoleh pelajaran serta kemudahan dalam meneladani dan mengikuti beliau Shalallahu A'laihi Wasalam.
               </p>
 
             </div>

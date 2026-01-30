@@ -38,7 +38,7 @@ export default function Navigation({ className, children, id }: NavProps) {
               alt="Logo"
               width={56}
               height={56}
-              className="w-15 h-auto dark:invert"
+              className="w-15 h-auto"
             />
              <Image
               src={YKBM}
@@ -65,8 +65,8 @@ export default function Navigation({ className, children, id }: NavProps) {
                 </Button>
               ))}
             </div>
-  <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
+  <Button asChild className="hidden sm:flex dark:invert">
+            <Link href="/wakaf">Wakaf</Link>
           </Button>
 
             <ClientOnly>

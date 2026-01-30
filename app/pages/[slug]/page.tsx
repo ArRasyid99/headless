@@ -1,3 +1,4 @@
+import ClientLayout from "@/app/client-layout";
 import { getPageBySlug, getAllPages } from "@/lib/wordpress";
 import { generateContentMetadata, stripHtml } from "@/lib/metadata";
 import { Section, Container, Prose } from "@/components/craft";
@@ -53,7 +54,8 @@ export default async function Page({
   }
 
   return (
-    <Section>
+    <ClientLayout>
+      <Section>
       <Container>
         <Prose>
           <h2>{page.title.rendered}</h2>
@@ -61,5 +63,6 @@ export default async function Page({
         </Prose>
       </Container>
     </Section>
+    </ClientLayout>
   );
 }

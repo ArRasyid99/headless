@@ -27,8 +27,8 @@ export function NavScroll({
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/60 backdrop-blur-md border-b shadow-sm"
-          : "bg-background",
+          ? "bg-white border-b shadow-sm"
+          : "bg-white",
         className
       )}
     >

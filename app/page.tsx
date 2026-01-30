@@ -6,6 +6,12 @@ import Hero from "@/components/hero/hero";
 import Donasi from "@/components/section/donasi-section";
 
 
+import FeatureSection from "@/components/masjid/feature-section";
+import SunnahSection from "@/components/masjid/blog-section";
+import BlogSection from "@/components/masjid/blog-section";
+import { Section } from "lucide-react";
+
+
 
 
 
@@ -16,9 +22,12 @@ export default function Home() {
   return (
 
     <ClientLayout>
-    
+    <section className="px-20"> 
     <Hero />
     <SubHeader />
+    <FeatureSection />
+    <BlogSection/>
+    </section>
     <SubAmalan />
     <Donasi />
     

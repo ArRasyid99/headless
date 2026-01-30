@@ -3,9 +3,8 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-10 px-5 md:px-10 lg:px-10">
+    <section className="relative overflow-hidden mb-20">
       <div className="container mx-auto py-12">
-
         <div className="
           flex flex-col
           gap-12
@@ -20,10 +19,10 @@ export default function Hero() {
             lg:basis-[40%]
             lg:max-w-[40%]
           ">
-            <h1 className="
-              font-title
+            <h1  className="
+              hero-title
               mb-4
-              text-3xl lg:text-4xl
+              text-3xl lg:text-4xl dark:text-white
             ">
               Menebarkan Sunnah Rasulullah ﷺ Membangun Umat
             </h1>
@@ -53,7 +52,7 @@ export default function Hero() {
                 alt=""
                 width={16}
                 height={16}
-                loading="lazy"
+               
               />
               Selengkapnya
             </Link>
@@ -75,6 +74,7 @@ export default function Hero() {
                   alt="Hero utama"
                   fill
                   fetchPriority="high"
+                  loading="lazy"
                   sizes="
                     (max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
@@ -116,7 +116,7 @@ export default function Hero() {
               </div>
 
               {/* SECOND IMAGE */}
-              <div className="absolute bottom-[-5%] left-[-5%] w-[55%] h-[70%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="absolute bottom-[-5%] left-[-5%] w-[55%] h-[70%] rounded-2xl overflow-hidden shadow-xl border-2 border-white">
                 <Image
                   src="/images/hero-img2.jpg"
                   alt="Hero kedua"

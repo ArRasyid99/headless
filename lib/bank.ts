@@ -1,5 +1,6 @@
 export interface Bank {
   id: string;
+  title: string;
   name: string;
   rekening: string;
   atasNama: string;
@@ -7,21 +8,17 @@ export interface Bank {
 
 export const bankList: Bank[] = [
   {
-    id: "bsi",
-    name: "Bank Syariah Indonesia (BSI)",
-    rekening: "3000-5000-45",
-    atasNama: "Yayasan Ashil Cahaya Tauhid",
-  },
-  {
-    id: "mandiri",
-    name: "Bank Mandiri",
-    rekening: "10-8000-3434-124",
-    atasNama: "Yayasan Ashil Cahaya Tauhid",
+    id: "bca",
+    title: "Rekening Wakaf Jariyah",
+    name: "Bank Central Asia Syariah (BCA Syariah)",
+    rekening: "0579898990",
+    atasNama: "Masjid Muhammad Al Qosim",
   },
   {
     id: "bri",
-    name: "Bank BRI",
-    rekening: "06-9601-0326-35509",
-    atasNama: "Yayasan Ashil Cahaya Tauhid",
+    title: "Rekening Operasional Dakwah",
+    name: "Bank Rakyat Indonesia (BRI)",
+    rekening: "591401020771536",
+    atasNama: "Kajian Boja Mengaji",
   },
 ];

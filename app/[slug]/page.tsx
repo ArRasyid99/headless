@@ -1,3 +1,5 @@
+import ClientLayout from "../client-layout";
+
 async function getPage(slug: string) {
 const res = await fetch(
   `http://bojamengaji.local/wp-json/wp/v2/pages?slug=${slug}`,
@@ -21,14 +23,15 @@ export default async function Page({
   if (!page) return <h1>Page not found</h1>;
 
   return (
-    <main>
+   <ClientLayout>
+     <main>
     {/* 1. Header Halaman */}
-      <header className="bg-gray-50 border-b py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+      <header className="bg-gray-50 border-b py-5">
+        <div className="px-20">
+          <h1 className="text-2xl md:text3xl font-semibold">
             {page.title.rendered}
           </h1>
-          <p className="mt-4 text-gray-500">
+          <p className="text-gray-500">
             Terakhir diperbarui: {new Date(page.date).toLocaleDateString('id-ID')}
           </p>
         </div>
@@ -48,5 +51,6 @@ export default async function Page({
         />
       </article>
     </main>
+   </ClientLayout>
   );
 }

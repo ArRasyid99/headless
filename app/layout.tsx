@@ -1,9 +1,11 @@
 // app/layout.tsx
 import "./globals.css";
-import { fontSans } from "@/lib/fonts";
+import { fontSans, fontSerif, fontCaption, fontArabic} from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/site.config";
 import type { Metadata } from "next";
+
+
 
 export const metadata: Metadata = {
   title: "Masjid Muhammad Al Qosim",
@@ -17,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen antialiased", fontSans.className)}>
+    <html lang="id" suppressHydrationWarning>
+      <body className={cn("min-h-screen antialiased", fontSans.className,
+        fontSerif.variable, fontCaption.variable, fontArabic.variable,
+      )}>
         {/* client dipisah */}
         {children}
       </body>

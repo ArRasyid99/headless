@@ -1,6 +1,6 @@
 export default function SubAmalan() {
   return (
-    <section className="bg-yellow-200 py-16">
+    <section className="bg-amber-300 py-16">
         <div>
             <h1 className="text-2xl md:text-sm lg:text-2xl font-bold mb-8 text-center">
                 Tiga Amal Jariyah Tak Terputus</h1>

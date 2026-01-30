@@ -23,6 +23,7 @@
         var(--font-sans);
     --font-body: var(--font-body);
     --font-title: var(--font-title);
+
     --color-border: hsl(var(--border));
     --color-input: hsl(var(--input));
     --color-ring: hsl(var(--ring));
@@ -188,24 +189,26 @@
     @apply font-body text-neutral-800;
   }
 
-  h1, h2, h3, h4 {
-    @apply font-title;
+   body {
+    font-family: var(--font-sans);
   }
+
+  h1 {
+    font-family: var(--font-sans); /* default h1 = Inter */
+  }
+
+  .hero-title {
+    font-family: var(--font-serif); /* hero h1 = Lora */
+  }
+  h2, h3, h4 {
+    @apply font-sans;
+  }
+
 }
 
-@utility font-caption {
-  font-family: var(--font-caption);
-}
-
-@utility font-arabic {
-  font-family: var(--font-arabic);
-}
 
 
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
+
 
 .video-frame {
   border-radius: 20px;

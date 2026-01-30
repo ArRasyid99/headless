@@ -18,9 +18,12 @@ export default function BankItem({ bank }: { bank: Bank }) {
   };
 
   return (
-    <div className="flex items-center justify-between gap-4 rounded-xl border bg-gray-50 px-4 py-3">
+    <div className="flex items-center justify-between gap-4 rounded-xl border bg-gray-50 px-4 py-3 ">
       <div className="space-y-1">
-        <p className="text-sm font-semibold text-gray-800">
+         <p className="text-sm font-semibold">
+          {bank.title}
+        </p>
+        <p className="text-sm font-medium text-gray-800">
           {bank.name}
         </p>
         <p className="text-sm font-mono text-gray-700">
