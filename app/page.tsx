@@ -7,9 +7,9 @@ import Donasi from "@/components/section/donasi-section";
 
 
 import FeatureSection from "@/components/masjid/feature-section";
-import SunnahSection from "@/components/masjid/blog-section";
+
 import BlogSection from "@/components/masjid/blog-section";
-import { Section } from "lucide-react";
+
 
 
 
