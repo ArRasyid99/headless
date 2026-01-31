@@ -10,7 +10,7 @@ export default function SubMedia() {
         <h1 className="font-bold text-2xl mb-10 text-center md:text-lg lg:text-3xl">
          Taman - taman Surga
         </h1>
-        <div className="mb-10 w-[90%] md:w-xl lg:w-3xl items-center mx-auto">
+        <div className=" container mx-auto mb-10 md:w-xl lg:w-3xl">
             <YouTubeLite videoId="p1-OzHaN3gU"/>
         </div>     
         
