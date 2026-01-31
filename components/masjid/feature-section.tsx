@@ -25,7 +25,7 @@ const features = [
     desc: "Tahsin, Belajar tajwid, dan Mentadaburinya",
   },
   {
-    icon: BookOpen,
+    icon: Users,
     title: "Shalat Sunnah Setelah Wudhu",
     desc: "2 Rakaat setelah wudhu",
   },

@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Masjid Muhammad Al Qosim",
-  description: "A starter template for Next.js with WordPress as a headless CMS.",
+  description: "Website Resmi Masjid Muhammad Al Qosim | Boja Mengaji",
   metadataBase: new URL(siteConfig.site_domain),
 };
 

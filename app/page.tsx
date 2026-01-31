@@ -9,6 +9,7 @@ import Donasi from "@/components/section/donasi-section";
 import FeatureSection from "@/components/masjid/feature-section";
 
 import BlogSection from "@/components/masjid/blog-section";
+import SubMedia from "@/components/section/media-section";
 
 
 
@@ -27,6 +28,7 @@ export default function Home() {
     <SubHeader />
     <FeatureSection />
     <BlogSection/>
+    <SubMedia/>
     </section>
     <SubAmalan />
     <Donasi />
